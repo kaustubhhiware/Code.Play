@@ -1,7 +1,7 @@
 # Code.Play
 Code player for website development
 
-This is an online code player which aims to help newbies at web development like me , to develop websites and see it upfront .
+This is an online code player which aims to help newbies at web development like me, to develop websites and see it upfront.
 
 It is still under development , but works properly .
 
