@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<title>Code.Play</title>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!--<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-
+ui.min.js"></script>
+-->
+
+<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+
+<!--
+Images and docs can not be added to codeplayer , so be cautious
+if your html page has static links -
+it is advised to use links in these cases
+
+-->
+<div id="container">
+
+	<div id="menuBar">
+
+		<div id="logo">
+			Code.Play
+		</div>
+
+		<div id="RunRun">
+			<button id="OliverQueen">Run</button>
+		</div>
+
+		<ul id="Schindler">
+			<li class="toggle selected">HTML</li>
+			<li class="toggle">CSS</li>
+			<li class="toggle">JS</li>
+			<li class="toggle selected" style="border:none;">Result</li>
+		</ul>
+
+	</div>
+
+	<div class="clear"> </div>
+
+	<div class="codeBox" id="HTMLBox">
+
+		<div class="codeLabel">HTML</div>
+		<textarea id="htmlCode">Sample code</textarea>
+
+	</div>
+
+	<div class="codeBox" id="CSSBox">
+
+		<div class="codeLabel">Css</div>
+		<textarea id="cssCode">Sample code</textarea>
+
+	</div>
+
+	<div class="codeBox" id="JSBox">
+
+		<div class="codeLabel">JS</div>
+		<textarea id="jsCode">Sample code</textarea>
+
+	</div>
+
+	<div class="codeBox" id="ResultBox">
+
+		<div class="codeLabel">Result</div>
+		<iframe id="resultFrame" src=""></iframe>
+
+	</div>
+
+</div>
+
+
+<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+<script type="text/javascript">
+
+	var windowHeight=$(window).height();
+	var menuBarHeight=$("#menuBar").height();
+	var codeBoxHeight=windowHeight-menuBarHeight;
+
+	$(".codeBox").height(codeBoxHeight+"px");
+
+	$(".toggle").click(function(){
+
+		$(this).toggleClass("selected");
+
+		var activeDiv=$(this).html();
+
+		$("#"+activeDiv+"Box").toggle();
+
+		var useDivs = $(".codeBox").filter(function(){
+
+			return ($(this).css("display")!="none");
+		}).length;
+		//filter codeBoxes on basis of a function
+		var width=100/useDivs;
+		$(".codeBox").width(width+"%");
+
+	});
+
+
+	$("#OliverQueen").click(function(){
+
+		$("iframe").contents().find("html").html(
+			'<style>'+$("#cssCode").val()+'</style>'
+			+$("#htmlCode").val());
+
+		document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
+		//note -this has a lot of security implications , but since I don't have private info on this
+		//server , it is ok
+	});
+
+</script>
+</body>
+</html>
