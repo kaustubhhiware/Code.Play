@@ -9,7 +9,7 @@
 	#menuBar{
 		width: 100%;
 		height: 40px;
-		background-color: #EEEEEE;
+		background-color:#009999;
 		border-bottom: 1px solid grey;
 	}
 
@@ -51,6 +51,10 @@
 		clear:both;
 	}
 
+  .toggle{
+    background-color: white;
+  }
+
 	.codeBox{
 		height: 100%;
 		width:50%;
@@ -67,6 +71,7 @@
 		font-size: 90%;
 		padding:5px;
 		box-sizing: border-box;
+    resize: none;
 	}
 
 	.codeLabel{
@@ -80,10 +85,10 @@
 	}
 
 	iframe{
-		height: 100%;
+		height: 99.3%;
 		position: relative;
-		left: 20px;
-		border:none;
+    padding-left: none;
+    width: 99%;
 	}
 
 	.selected{
