@@ -6,12 +6,19 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Static website builder" />
 
 <!--<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-
 ui.min.js"></script>
 -->
+
+<!--code highlight-->
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.4.0/styles/default.min.css">
+<script src="http://cdn.jsdelivr.net/highlight.js/9.4.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- code highlight-->
 
 <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
 
@@ -25,6 +32,8 @@ ui.min.js"></script>
 Images and docs can not be added to codeplayer , so be cautious
 if your html page has static links -
 it is advised to use links in these cases
+
+visit https://highlightjs.org/download/ for code highlight
 
 -->
 <div id="container">
@@ -59,21 +68,29 @@ it is advised to use links in these cases
 	<div class="codeBox" id="HTMLBox">
 
 		<div class="codeLabel">HTML</div>
-		<textarea id="htmlCode">Sample code</textarea>
+		<pre><code class="html"><textarea id="htmlCode">
+&lt;body&gt;
+	meh.
+&lt;/body&gt;
+		</textarea></code></pre>
 
 	</div>
 
 	<div class="codeBox" id="CSSBox">
 
 		<div class="codeLabel">Css</div>
-		<textarea id="cssCode">Sample code</textarea>
+		<pre><code class="css"><textarea id="cssCode">
+
+		</textarea></code></pre>
 
 	</div>
 
 	<div class="codeBox" id="JSBox">
 
 		<div class="codeLabel">JS</div>
-		<textarea id="jsCode">Sample code</textarea>
+		<pre><code class="javascript"><textarea id="jsCode">
+		
+		</textarea></code></pre>
 
 	</div>
 
@@ -114,6 +131,9 @@ it is advised to use links in these cases
 
 	});
 
+
+
+	//initialise web page
 
 	$("#OliverQueen").click(function(){
 
