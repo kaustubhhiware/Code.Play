@@ -15,11 +15,15 @@ ui.min.js"></script>
 -->
 
 <!--code highlight-->
+
+<link href="prism.css" rel="stylesheet" type="text/css" />
+<script src="prism.js" type="text/javascript"></script>
+<!--
 <link rel="stylesheet" href="highlight/styles/default.css">
 <script src="highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<!--
+
 	online version conflicts with structure
 <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.4.0/styles/default.min.css">
 <script src="http://cdn.jsdelivr.net/highlight.js/9.4.0/highlight.min.js"></script>
@@ -38,9 +42,11 @@ ui.min.js"></script>
 <!--
 Images and docs can not be added to codeplayer , so be cautious
 if your html page has static links(like/images/arbit.png ) -
-it is advised to use links(say - google.com/asda11sd23.jpg for example ) in these cases
+it is advised to use links(say - https://avatars1.githubusercontent.com/u/11318551?v=3&s=400
+ for example ) in these cases
 
-visit https://highlightjs.org/download/ for code highlight
+visit https://highlightjs.org/download/ 
+ or prismjs.com for code highlight
 
 -->
 <div id="container">
@@ -75,7 +81,7 @@ visit https://highlightjs.org/download/ for code highlight
 	<div class="codeBox" id="HTMLBox">
 
 		<div class="codeLabel">HTML</div>
-		<pre><code class="html"><textarea id="htmlCode">
+		<pre><code><textarea id="htmlCode">
 &lt;body&gt;
 	meh.
 &lt;/body&gt;
@@ -86,7 +92,7 @@ visit https://highlightjs.org/download/ for code highlight
 	<div class="codeBox" id="CSSBox">
 
 		<div class="codeLabel">Css</div>
-		<pre><code class="css"><textarea id="cssCode">
+		<pre><code class="language-css"><textarea id="cssCode">
 
 		</textarea></code></pre>
 
@@ -95,7 +101,7 @@ visit https://highlightjs.org/download/ for code highlight
 	<div class="codeBox" id="JSBox">
 
 		<div class="codeLabel">JS</div>
-		<pre><code class="javascript"><textarea id="jsCode">
+		<pre><code class="language-javascript"><textarea id="jsCode">
 		
 		</textarea></code></pre>
 
@@ -110,6 +116,9 @@ visit https://highlightjs.org/download/ for code highlight
 
 </div>
 
+
+
+<script src="prism.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
 <script type="text/javascript">
@@ -156,3 +165,4 @@ visit https://highlightjs.org/download/ for code highlight
 </script>
 </body>
 </html>
+
