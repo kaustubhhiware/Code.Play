@@ -25,9 +25,14 @@
 		padding:10px 10px 0 50px;
 	}
 
-  #forkMe img{
-    height: 25px;
-  }
+  	#forkMe img{
+    	height: 25px;
+  	}
+
+  	#counter{
+  		float: left;
+		padding:10px 10px 0 50px;
+  	}
 
 	#RunRun{
 		float: right;
